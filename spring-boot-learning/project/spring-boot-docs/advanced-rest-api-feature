@@ -1,0 +1,163 @@
+                Advanced REST-API
+                                             
+                             Documentation        - Open API, Swagger
+                              
+                             Content Negotiation  - XML/JSON (dependency)                  
+                                              
+                             Internationalization - i18n our rest api client may be in different different country based on country how to send response
+                             Version              - multiple version of REST-API
+                              
+                             HATEOAS              - 
+                             
+                             Static Filtering     - 
+                             
+                             Dynamic Filtering    - 
+                             
+                             Monitoring REST-API  -      
+                                      
+                                                    Documentation             
+                                                  
+                      REST-API Documentation :  Open API(Generate Docs) + Swagger UI (Present the docs / play around with it)
+                        
+                             2011 : Swagger Specification and Swagger Tools were introduced
+                             2016 : Open API Specification created based on Swagger Spec.
+                            
+                            Open API Spec. :
+                                  Standard language - agnostic interface
+                                  Discover and understand REST-API
+                                  Earlier called Swagger Specification
+                            
+                            Swagger UI : 
+                                  Visualization and interact with your REST API
+                                  
+                                  springdoc open api - used to generate auto-generate of rest-api endpoints
+                                                     - But it support with spring v1, v2 to used with spring-3
+                                                     - git spring >springdoc-openapi-starter-webmvc-ui
+                                                     
+                                           dependency : 
+                                                         <dependency>
+                                                         <groupId>org.springdoc</groupId>
+                                                         <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+                                                         <version>2.1.0</version>
+                                                         </dependency> 
+                                                         
+                                                                  
+                                                        Content Negotiation
+                                                 
+                                        Consumer and Service provider(REST-API) will negotitate with each other in below shown eg                
+                                                        
+                                  Same Resource - Same URI
+                                  eg:
+                                     Different Content Type : JSON/XML
+                                     Different Language     : English, French, Chinese, Japnese 
+                                         this is done with the help of request header                                   
+                                                                                 
+                                    Headers : Accept  = application/xml
+                                     
+                                     dependency : 
+                                          <dependency>
+                                          <groupId>com.fasterxml.jackson.dataformat</groupId>
+                                          <artifactId>jackson-dataformat-xml</artifactId>
+                                          <version>2.15.2</version>
+                                          </dependency>      
+                                          
+                                          
+                                                     Internationlization (i18n)
+                                                     
+                                                     i18n - Because of 18 character
+                                                          - Your REST API might have consumers from around the world
+                                                          - HTTP Request Header is used to accept language
+                                                          
+                                                          eg: 
+                                                            en-English(GoodMorning)
+                                                            n1-Dutch(Goedemorgen)
+                                                            fr-French(Bonjour) 
+                                                            
+                                                    MessageSource messageSource: is a interface used to parameterization and internationlization of such message.
+                                                    Locale:
+                                                    LocaleContextHolder:
+                                                    
+                                                    
+                                                    messageSource.getMessage("good.morning.message",null,"Default Message", locale);
+                                                    
+                                                    file-name : messages.properties
+                                                                messages_nl.properties
+                                                                message_fr.properties
+                                                                
+                                                    Versioning REST-API
+                                                                       
+                                                  -When you(supplier) change format of the response it should not affect the consumer or It should not force the consumer to change 
+                                                  -Here the versioning comes
+                                                  - eg: you like to change the name - firstName, lastName
+                                                                Types  
+                                                                
+                                                           - URI           - v1/users , v2/users - Twitter
+                                                           - Request param - users?version=1     - Amazon
+                                                           - Header        - Request Header      - Microsoft
+                                                           - Media Type    - MIME Type           - Git
+                                                           
+                                                           
+                                                           Factors to consider for versioning
+                                                           
+                                                     1. URI Pollution         - more number of uri in URI and Request param
+                                                     2. Misuse of HTTP Header - Http Header is not made for versioning
+                                                     3. Caching               - Caching is happen based on URI(so URI,RequestParam is easy) while (Header, MediaType we also want to look at the Headers for Caching)
+                                                     4. Can we execute in brow- URI and Request Param can be but Header and Media Type can't
+                                                     5. API Documentation     - Easy for URI,Request Param other little bit difficult
+               ************************        conclusion  : Depends on Requirement  recommend Only one version      **************************
+                                            
+                                            
+                                                        
+                                                            HATEOAS
+                                                        
+                                             Hypermedia As The Engine Of Application State
+                                             
+                                             
+                                             PENDING?????????????????????????????????????????????????????????????????????????????????????
+                                             
+                                             
+                                             
+                                             
+                                                            Filtering
+                                                            
+                                                   Serialization : converting java object into stream(JSON/XML)
+                                                   
+                                                   eg: jackson is one of the framwork for serialization
+                                                   
+                                                   property name customize for client(JSON) - @JSONProperty
+                                                   
+                                                       Types of Filtering
+                                                         1. Static Filtering
+                                                         2. Dynamic Filtering
+                                                         
+                                                  Static-Filtering : same filtering for a bean across all REST API - @JSONIgnore(field level)preferred,@JSONIgnoreProperties({"field1","field2"})(class-level)
+                                                  Dynamic-Filtering: Customize filtering for a bean for specific REST API
+                                                  
+                                                  
+                                                                   : MappingJacksonValue = new MappingJacksonValue(new User("name","password","place"));
+                                                                   : SimpleBeanPropertyFilter = SimpleBeanPropertyFilter.filterOutAllExcept("fieldName1","fieldName2")
+                                                                   : FilterProvider = new SimpleFilterProvider().addFilter("filtername", filterPropertyName);
+                                                                   
+                                                                   : mappingJacksonValue.setFilter(filterProvider);
+                                                             
+                                                   Return only selected fields(Password)    -   
+                                                        
+                                                        
+                                                        
+                                                          Actuator(management.endpoints.web.exposure.include=*)
+                                                        
+                                                        1. Check what are the bean defined in application
+                                                        2. Health of the application
+                                                        3. Environment of application - port, java-verion,class-path
+                                                        4. Metrics- how many HTTP request from the client
+                                                        
+                                                          
+                                                          
+                                                          Explore REST API - Using HAL Explorer
+                                                          
+                                                          Hypertext Application Language
+                                                          API explorer for REST-API Hypermedia APIs using HAL
+                                                          suggestion one request suggest the another endpoint for futher process
+                                                          
+                                                          dependency : spring-data-rest-hal-explorer
+                                                          

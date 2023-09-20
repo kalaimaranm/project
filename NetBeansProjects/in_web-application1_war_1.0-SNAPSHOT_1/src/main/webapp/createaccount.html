@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content=
+              "width=device-width, initial-scale=1.0">
+        <title>
+            Build a Survey Form using HTML and CSS
+        </title>
+
+        <style>
+
+            /* Styling the Body element i.e. Color,
+            Font, Alignment */
+            body {
+                background-color: #05c46b;
+                font-family: Verdana;
+                text-align: center;
+            }
+
+            /* Styling the Form (Color, Padding, Shadow) */
+            form {
+                background-color: #fff;
+                max-width: 500px;
+                margin: 50px auto;
+                padding: 30px 20px;
+                box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+            }
+
+            /* Styling form-control Class */
+            .form-control {
+                text-align: left;
+                margin-bottom: 25px;
+            }
+
+            /* Styling form-control Label */
+            .form-control label {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            /* Styling form-control input,
+            select, textarea */
+            .form-control input,
+            .form-control select,
+            .form-control textarea {
+                border: 1px solid #777;
+                border-radius: 2px;
+                font-family: inherit;
+                padding: 10px;
+                display: block;
+                width: 95%;
+            }
+
+            /* Styling form-control Radio
+            button and Checkbox */
+            .form-control input[type="radio"],
+            .form-control input[type="checkbox"] {
+                display: inline-block;
+                width: auto;
+            }
+
+            /* Styling Button */
+            button {
+                background-color: #05c46b;
+                border: 1px solid #777;
+                border-radius: 2px;
+                font-family: inherit;
+                font-size: 21px;
+                display: block;
+                width: 100%;
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Customer Details</h1>
+
+        <!-- Create Form -->
+        <form id="form" method = "post" action = "addcustomer">
+
+            <!-- Details -->
+            <div class="form-control">
+                <label for="name" id="label-name">
+                    Name
+                </label>
+
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="name" name ="name"
+                       placeholder="Enter your name" />
+            </div>
+
+            <div class="form-control">
+                <label for="email" id="label-email">
+                    Email
+                </label>
+
+                <!-- Input Type Email-->
+                <input type="email"
+                       name ="email"
+                       id="email"
+                       placeholder="Enter your email" />
+            </div>
+
+            <div class="form-control">
+                <label for="age" id="label-age">
+                    Age
+                </label>
+
+                <!-- Input Type Text -->
+                <input type="text"
+                       id="age"
+                       name ="age"
+                       placeholder="Enter your age" />
+            </div>
+
+            <div class="form-control">
+                <label for="phone" id="label-role">phoneno</label>
+                <input type = "text" id = "phone" name = "phone" placeholder="Enter Your Phoneno" />
+                <!-- Dropdown options -->
+
+            </div>
+            <div class="form-control">
+                <label for="aadhaar" id="label-role">AadhaarNo</label>
+                <input type = "text" id = "aadhaar" name = "aadhaar" placeholder="Enter Your AadhaarNo" />
+            </div>
+
+
+            <div class="form-control">
+                <label>
+                    Gender
+                </label>
+                <!-- Input Type Radio Button -->
+                <label for="recommed-1">
+                    <input type="radio"
+                           id="recommed-1"
+                           name="recommed">MALE</input>
+                </label>
+                <label for="recommed-2">
+                    <input type="radio"
+                           id="recommed-2"
+                           name="recommed">FEMALE</input>
+                </label>
+                <label for="recommed-3">
+                    <input type="radio"
+                           id="recommed-3"
+                           name="recommed">OTHERS</input>
+                </label>
+            </div>
+
+            <div class="form-control">
+                <div ><label for="doorno">
+                        Address
+                        <label for = "doorno">Door-no / plot-no</label>
+                </div>
+                <!--</label>-->  
+                <input type = "text" id = "doorno" name = "doorno"><br/>
+                <label for ="street">Street</label>
+                <input type = "text" id = "street" name = "street"><br/>
+                <label for = "distric">Distric</label>
+                <input type = "text" id = "distric" name = "distric"><br/>
+                <label for ="state">State</label>
+                <input type = "text" id = "state" name = "state"><br/>
+                <label for = "pincode">Pincode</label>
+                <input id = "pincode" type = "text" name = "pincode">
+                <!-- multi-line text input control -->
+
+            </div>
+
+            <!-- Multi-line Text Input Control -->
+            <button type="submit" value="submit">
+                Submit
+            </button>
+        </form>
+        <!--<a href = ""></a>-->
+    </body>
+
+</html>

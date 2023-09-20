@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://kannan_v:Vkc%405919@bassure.in:27017/viru_db8
+       

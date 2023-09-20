@@ -1,0 +1,32 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://dhinakaran18:D!%401808@bassure.in:27017/dhinakaran_db
+
+
+ims:
+  statuscode:
+    success: 600
+    field-valid: 601
+    error: 602
+    resourceNotFound: 603
+    tokenUpdate: 604
+    timeOut: 605
+    noData: 606
+    authorize: 607
+    wrongEndPoint: 608
+    duplication: 608
+    failed: 610
+    serverError: 650
+    noNetworkConnection: 651
+
+  statusmessage:
+    error-key: errors
+    success: Operation completed successfully
+    failed: failed
+    delete-message: deleted successfully
+    edit-message: edited Successfully
+    add-message: added Successfully
+    already-exists: already exists
+    no-data-found: No data to show
+    server-error: Server error, try again later

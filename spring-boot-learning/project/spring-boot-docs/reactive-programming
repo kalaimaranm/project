@@ -1,0 +1,27 @@
+                                                        Reactive - Programming
+                                                        
+                            It is just a rule to follow to implement reactive-programming
+                            
+                            - Publisher
+                            - Subscriber
+                            - Subscription
+                            - Processor
+                                                        
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       
+                                                       Back-Pressure(Get all item from incentory(Ajio))
+                                          
+                Application may not able to handle huge data
+                Application may crash with out of memory error
+                
+                - When you hit a rest-api call like get-all-customers/get-all-products/get-all-employee
+                         You may not able to handle/store the all data
+                         Because it is huge data
+                         By using back-pressure we can stream the data 
+                         We can utilize the cpu                                        

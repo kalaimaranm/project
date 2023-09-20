@@ -1,0 +1,48 @@
+                                                    File-Handling in java
+                                                    
+     Stream -     sequence/flow of data
+                  byte     character
+                  
+                  
+   NOTE: 
+        Any class ending with stream then it is for byte reading
+        Any class ending with reader then it is for character reading
+        Any class that implements closeable/autocloseable then the class is a resource
+        It is important to close the class when it is done
+        	                  
+                       
+                                                       Streams in java
+                                                       
+             In some case character stream is more efficient than byte stream
+                                                       
+                                                       
+                              
+                 1. Byte Stream
+                 
+                   1. Input  Stream - read() method
+                   2. Output Stream - write() method
+                   
+                 2. Character Stream
+                 
+                   1. Reader       - read() method
+                   2. Writer       - write() method
+                   
+                  BufferedReader, CharArrayReader, FilterReader, InputStreamReader, PipedReader, StringReader.....
+                                                                                                        
+                                                      IOException
+                                            
+                  FileNotFound, FileNotAble to read, File could not be read,, File could not be open, File is curupted....
+                                                                                                       
+                                                         
+                                                      Pre-defined streams
+                 
+                            System.in  -   keyboard 
+                            System.out -   console
+                            System.err -   error console
+                 
+                 
+                 InputStreamReader - It bridge from byte stream to character stream
+                                     It is used to convert byte stream to character stream
+                                     
+                 
+                                                                                                                                                  

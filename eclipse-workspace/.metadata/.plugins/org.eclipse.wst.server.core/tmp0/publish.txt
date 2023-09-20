@@ -1,0 +1,10 @@
+#Tomcat publish data
+#Thu Apr 20 10:36:08 IST 2023
+org.eclipse.jst.jee.server\:/binary\:/home/bas200193/eclipse-workspace/house/WebContent/WEB-INF/lib/spring-web-5.3.9.jar=WEB-INF/lib/spring-web-5.3.9.jar
+org.eclipse.jst.jee.server\:/binary\:/home/bas200193/eclipse-workspace/databinding-dynamic2/WebContent/META-INF/lib/spring-web-5.3.9-sources.jar=META-INF/lib/spring-web-5.3.9-sources.jar
+org.eclipse.jst.jee.server\:/binary\:/home/bas200193/eclipse-workspace/house/WebContent/WEB-INF/lib/spring-web-5.3.9-sources2.jar=WEB-INF/lib/spring-web-5.3.9-sources2.jar
+org.eclipse.jst.jee.server\:/binary\:/home/bas200193/eclipse-workspace/house/WebContent/WEB-INF/lib/spring-web-5.3.10.jar=WEB-INF/lib/spring-web-5.3.10.jar
+org.eclipse.jst.jee.server\:/binary\:/home/bas200193/eclipse-workspace/databinding-dynamic2/WebContent/WEB-INF/lib/spring-web-5.3.9-sources.jar=WEB-INF/lib/spring-web-5.3.9-sources.jar
+org.eclipse.jst.jee.server\:/binary\:/home/bas200193/eclipse-workspace/databinding-dynamic2/WebContent/META-INF/lib/spring-web-5.3.9.jar=META-INF/lib/spring-web-5.3.9.jar
+org.eclipse.jst.jee.server\:/binary\:/home/bas200193/eclipse-workspace/databinding-dynamic2/WebContent/WEB-INF/lib/spring-web-5.3.9.jar=WEB-INF/lib/spring-web-5.3.9.jar
+org.eclipse.jst.jee.server\:/binary\:/home/bas200193/eclipse-workspace/house/WebContent/WEB-INF/lib/spring-web-5.3.9-sources.jar=WEB-INF/lib/spring-web-5.3.9-sources.jar

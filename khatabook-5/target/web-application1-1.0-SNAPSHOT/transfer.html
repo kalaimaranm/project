@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+<html lang="en" > 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>CodePen - Student Profile</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'> 
+        <!--<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'><link rel="stylesheet" href="./style.css">--> 
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                font-family: 'Lato', sans-serif;
+                color: #000;
+            }
+
+            .student-profile .card {
+                border-radius: 10px;
+            }
+
+            .student-profile .card .card-header .profile_img {
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+                margin: 10px auto;
+                border: 10px solid #ccc;
+                border-radius: 50%;
+            }
+
+            .student-profile .card h3 {
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .student-profile .card p {
+                font-size: 16px;
+                color: #000;
+            }
+
+            .student-profile .table th,
+            .student-profile .table td {
+                font-size: 14px;
+                padding: 5px 10px;
+                color: #000;
+            }
+            .button-67 {
+                align-items: center;
+                background: #CCD1D1;
+                /*background: #C39BD3;*/
+                /*background: #f5f5fa;*/
+                border: 0;
+                border-radius: 8px;
+                box-shadow: -10px -10px 30px 0 #fff,10px 10px 30px 0 #1d0dca17;
+                box-sizing: border-box;
+                color: #2a1f62;
+                cursor: pointer;
+                display: flex;
+                font-family: "Cascadia Code",Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+                font-size: 1rem;
+                justify-content: center;
+                line-height: 1.5rem;
+                padding: 15px;
+                position: relative;
+                text-align: left;
+                transition: .2s;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                white-space: pre;
+                width: max-content;
+                word-break: normal;
+                word-spacing: normal;
+            }
+
+            .button-67:hover {
+                background: #f8f8ff;
+                box-shadow: -15px -15px 30px 0 #fff, 15px 15px 30px 0 #1d0dca17;
+            }
+
+            @media (min-width: 768px) {
+                .button-67 {
+                    padding: 24px;
+                }
+            }
+
+        </style> 
+    </head> 
+    <body> 
+        <div class="student-profile py-4"> 
+            <div class="container"> 
+                <div class="row"> 
+                    <div class="col-lg-4"> 
+                        <div class="card shadow-sm"> 
+                            <div class="card-header bg-transparent text-center"> 
+                                <img class="profile_img" src="https://placeimg.com/640/480/arch/any" alt=""> 
+                                <h3>${customer.getName}</h3> 
+                            </div> 
+                            <div class="card-body"> 
+                                <p class="mb-0"><strong class="pr-1">Customer ID:</strong>${customer.getId()}</p> 
+                                <p class="mb-0"><strong class="pr-1">Status:</strong>${customer.isStatus() ? "Active" : "InActive"}</p> 
+                            </div> 
+                        </div> 
+                    </div> 
+                    <div class="col-lg-8"> 
+                        <div class="card shadow-sm"> 
+                            <div class="card-header bg-transparent border-0"> 
+                                <h3 class="mb-0"><i class="far fa-clone pr-1"></i>General Information</h3> 
+                            </div> 
+                            <div class="card-body pt-0"> 
+                                <table class="table table-bordered"> 
+                                    <tr> 
+                                        <th width="30%">Phone no</th> 
+                                        <td width="2%">:</td> 
+                                        <td>${customer.getPhone()}</td> 
+                                    </tr> 
+                                    <tr> 
+                                        <th width="30%">Aadhaar No	</th> 
+                                        <td width="2%">:</td> 
+                                        <td>${customer.getAadhaar()}</td> 
+                                    </tr> 
+                                    <tr> 
+                                        <th width="30%">Gender</th> 
+                                        <td width="2%">:</td> 
+                                        <td>Male</td> 
+                                    </tr> 
+                                    <tr> 
+                                        <th width="30%">Debt Balance</th> 
+                                        <td width="2%">:</td> 
+                                        <td>${customer.getDebtBalance()}</td> 
+                                    </tr> 
+                                </table> 
+                                <div class="card-header bg-transparent border-0"> 
+                                    <h3 class="mb-0"><i class="far fa-clone pr-1"></i>Address</h3> 
+                                </div> 
+                                <table class="table table-bordered"> 
+                                    <tr> 
+                                        <th width="30%">Door/House no</th> 
+                                        <td width="2%">:</td> 
+                                        <td>${customer.getAddress().getHouseNo()}</td> 
+                                    </tr> 
+                                    <tr> 
+                                        <th width="30%">Street	</th> 
+                                        <td width="2%">:</td> 
+                                        <td>${customer.getAddress().getStreet()}</td> 
+                                    </tr> 
+                                    <tr> 
+                                        <th width="30%">Distric</th> 
+                                        <td width="2%">:</td> 
+                                        <td>${customer.getAddress().getDistric()}</td> 
+                                    </tr> 
+                                    <tr> 
+                                        <th width="30%">State</th> 
+                                        <td width="2%">:</td> 
+                                        <td>${customer.getAddress().getState()}</td> 
+                                    </tr> 
+                                    <tr> 
+                                        <th width="30%">Pincode</th> 
+                                        <td width="2%">:</td> 
+                                        <td>${customer.getAddress().getPincode()}</td> 
+                                    </tr> 
+                                </table> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 

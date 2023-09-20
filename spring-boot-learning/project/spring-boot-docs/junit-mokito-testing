@@ -1,0 +1,37 @@
+            technology acnostic
+            polyglot- database
+            neo 4j -graph database, good in microservice
+            mysql
+            
+            
+            load balancing
+            selective scalling - a service which take higher number of request increase the RAM
+            load balancer - distribute the request with the multiple application
+            highly reusable
+            chatty service - microservice take to one other frequently(anti-pattern)
+            ESB - SOAP
+            
+            
+                           Messaging
+                           
+                           Topic based and Queue based (Messaging Queue)
+                           
+                   1. Point to Point       - synchronous service connect to each other and speak with one another
+                   2. Pubs/Subs            - publisher and Subscriber(Queue)
+                   3. Kafka (Topic Based)  - All the copies till from the 
+                      
+                    Rest Template - Synchornous
+                    Web Client    - Support Reactive model
+                    
+                    Infrastructure as a service - AWS, Azure, google cloud, IBM......
+                    platform as a service       - Infrastructure  +  server = Ready to deploy
+                    software as a service       - Like Teams google  , single tenant - based on client flavour, multi-tenant  - gamil
+                    Function as a service       - serverless
+                    
+                    
+                    How to develop multi-tenant application?
+                     
+                    
+          
+            
+            

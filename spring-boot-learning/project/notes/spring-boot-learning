@@ -1,0 +1,227 @@
+                                                                   Spring-Boot
+                                                                   
+                                                                   
+  Why frame work?
+                 while developing enterprise application we should concentrate more on business logic 
+                 Reduce Boiler Plate code
+                 It will take care of dependency
+                 Basic Structure and Basic functionality
+                                                               
+  Why spring-frame work?
+  
+               Spring frame work is a frame work of frame work(Easy to implement other frame like Hibernate)
+               
+               
+               
+  Solve:
+         1. IOC - give the control to the framework(creating object), Tigtly coupled to loosly coupled
+         2. D.I - one class need help of other class, is a process of doing the IOC
+         3. AOP - How many times a method is invoked?, logging?, invoke this method before that method get invoked,seperate the logic (non-functional code)
+         4. Spring DATA - Think implementing JDBC working with that is harder
+                        - Frame work provide spring data library
+                                                                                                      
+         Three Types of creating Bean
+              1. XML based - ApplicationContext = ClassPathXmlApplicationContext();
+              2. Annotaion based with XML - ApplicationContext = ClassPathXmlApplicationContext();
+              3. Java class based  - ApplicationContext = AnnotationConfigApplicationContext()
+                         3.2 - user creating object with @Bean 
+         Bean Scopes:
+            1. Singleton - same object
+            2. Prototype - different object
+            3. Request - use in Spring MVC
+            4. Session - use in Spring MVC
+            5. Global Session - use in Spring MVC
+                                                                     
+        Bean life-cycle(7):
+            1. Declaring Bean
+            2. Instentiating Bean
+            3. Populate the property or constructor declared inside the bean
+            4. Post initialization - DB-connection, start the Thread  (PostConstruct|implements BeanName)
+            5. Available inside the Container
+            6. Pre Destroy phase
+            7. Destroying Bean
+            
+   What is Spring-boot?
+   
+          It is frame-work
+          It is build on top of spring
+          concentrate only on business logic not on configuration
+          Spring-boot has started dependency eg: spring-boot-starter-jdbc
+                                                 spring-boot-starter-jdbc template
+                                                 
+          These starter will include all the other dependency to work with this
+          Auto-configuration
+          Embedded server - In normal application we have to create project and the convert it into war then run in server
+                          - In spring-boot application we create jar file which also embedded with server
+                          - Because of Embedded server ready for production
+                          
+         IOC - give the control to spring to create object
+             - To achieve this we use D.I pattern
+             
+             
+             
+                                    @SpringBootApplication - (openiated)
+                                    
+                                    1.@SpringBootConfiguration
+                                    2.@EnableAutoConfiguration
+                                    3.@ComponentScan                
+                                                                            
+                                                         
+                                   @Component
+                                      |
+                                      |
+                                      |
+                                    1. @Controller
+                                    2. @Service
+                                    3. @Repository
+                                    
+                                    
+                                    @RestController
+                                    
+                                    1.@Controller
+                                    2.@ResponseBody
+                                    
+          Payload - Request
+          Request - Json request 
+                    Json response                          
+                                    
+                                                                              
+     To Run project in command-Line: 
+                       1. Go inside the project
+                       2. mvn spring-boot:run - run the application
+                       
+     To Enable dev-tools in IntellijIDE
+                       1. ctrl + shift + a
+                       2. search registry
+                       3. compile.automake.allow.when.app.running - tick                  
+                                                                                        
+                                                                  
+                                                                  
+               Controller - Routing layer 
+               Service    - Business logic
+               Repository - Data Access layer
+               
+               
+                                                    H2 - Database
+                                                    
+          - H2 database written in Java, light weigth, only for testing purpose
+          - H2 supports various data storage modes, including in-memory, file-based, and mixed mode.                                          
+                                                    
+                               h2-console      
+                               
+                               
+                               
+        spring-data jpa will create table also for us automatically 
+        
+        
+        
+                                        JPARepository
+                                        
+                                        
+                  - JPA Repository is an interface by extends this interface with the dao interface 
+                  - It give default crud operation methods 
+                  - IF you want more method then follow the naming convention of the method inside the dao interface
+                  - Naming convention is declared in the documentation
+                     eg: findByName
+                         findByAge
+                         
+                         
+                         
+                                           LOGGER
+                             
+                            - Loggers are helpful for debugging the application
+                            - Some-times System.out.println("inside method()"); this will not work 
+                            - So, Here we can use Logger
+                             
+                                                           
+                                                                     
+                                                                     
+                      Spring-boot comes with slf4j logger by default
+                      
+                      Different types of Logger
+                      
+                         1. log back
+                         2. lock 4j
+                                       
+                                       
+                                       
+                                           Lombok
+                                           
+                            - It is used to avoid the Boiler plate code in model, Entity, POJO class
+                            - Like Getter, Setter, toString, hashCode, Constructor
+                            
+                            
+                            NOT KNOWN FULLY
+                             - We also want to add plugin for lombok
+                                 org.projectlombok
+                                 lombok
+                                 
+                             
+                             Annotation
+                             
+                             @Getter
+                             @Setter
+                             @ToString
+                             @AllArgsConstructor
+                             @NoArgsConstructor
+                             @Data   ==  @Getter, @Setter, @ToString, @EqualsAndHashCode
+                             @Builder - to implement the builder pattern
+                             
+                             
+                                            Exception Handling
+                                            
+                                      
+                       @RestControllerAdvice
+                       @ExceptionHandler
+                       @ResponseStatus(HttpStatus.INTERNAL)
+                       
+                                    
+                                      
+                                      Unit-Testing
+                                      
+                   Dependency: spring-boot-starter-test(j-unit jupiter(5), mokito)                   
+                                      
+                         - Test the all the three layers (controller, service, repisitory)             
+                         - or rest all those with integration testing
+                         
+                         
+                  moking
+                       - one function dependent on other function on that we don't want call that method instead of calling that method take this as output
+                       eg: Consider now testing Controller 
+                                           Here controller dependent on service, here want we can do dont call service layer I will some data what service layer will give exactly without calling service layer
+                                           
+                                           
+                                                               
+                                      @BeforeEach
+                                      @AfterEach
+                                      @BeforeAll
+                                      @AfterAll
+                                      @Test
+                                      @SpringBootTest
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      
+                                          Builder Design Pattern
+                 When you end up with different constructor for same object(class)
+                 Then go with Builder design pattern
+                                                       
+                 We are not forcing the user to give all info
+                 We give the option to user and choose wisely
+                 
+                 
+                    Burger
+                    BurgerBuilder(public static inner class)
+                    
+                    no setter method
+                    private constructor
+                    build() method is used to create object for entire
+                    
+                    
+                                                          
+                                                                              

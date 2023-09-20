@@ -1,0 +1,15 @@
+                                                            HTTP Status Code
+                                                            
+                                                            
+    Important Response Status Code
+   
+    1. 200 => Success
+    2. 201 => Created (User Account created data saved successfully)
+    3. 204 => No Content (A proper code for updates that don't return data to the client)
+    4. 401 => Unauthorized (When authorization fail)
+    5. 400 => Bad Request (Validation error)
+    6. 500 => Server Error
+    7. 404 => Resource not Found
+           
+          
+                                                            

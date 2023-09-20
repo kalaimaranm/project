@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="/home/bas200193/eclipse-workspace/Hotels"/>
+			<item value="/home/bas200193/eclipse-workspace/property-formater-editor/WebContent/WEB-INF/view/paymentForm.jsp"/>
+			<item value="/home/bas200193/eclipse-workspace/databinding-usingform/src"/>
+			<item value="/home/bas200193/eclipse-workspace/databinding-usingform/pom.xml"/>
+			<item value="/home/bas200193/eclipse-workspace"/>
+			<item value="/home/bas200193/eclipse-workspace/spring-mvc-demo/WebContent/WEB-INF/view/main-menu.jsp"/>
+			<item value="/home/bas200193/eclipse-workspace/spring-mvc-demo/WebContent/WEB-INF/dispatcher-servlet.xml"/>
+			<item value="/home/bas200193/eclipse-workspace/spring-mvc-demo"/>
+			<item value="/home/bas200193/eclipse-workspace/TestingProject"/>
+			<item value="/home/bas200193/eclipse-workspace/spring-l-c"/>
+			<item value="/home/bas200193/eclipse-workspace/spring-l-calculator/src/main/java/com/kalai/lc/configuration/ApplicationInitializer.java"/>
+			<item value="/home/bas200193/eclipse-workspace/Annotation/pom.xml"/>
+			<item value="/home/bas200193/eclipse-workspace/com"/>
+			<item value="/home/bas200193/eclipse-workspace/com.abcd"/>
+			<item value="/home/bas200193/eclipse-workspace/Hotels/pom.xml"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.kalai.hibernate.com.kalai.project"/>
+			<item value="com.kalai.hibernate.hibernate_first_project"/>
+			<item value="com.kalai.mvc.sd"/>
+			<item value="com.kalai.mvc.databinding_tesluko"/>
+			<item value="com.kalai.mvc.tesluko"/>
+		</list>
+		<list key="groupId">
+			<item value="com.kalai.hibernate"/>
+			<item value="com.kalai.mvc"/>
+		</list>
+		<list key="artifactId">
+			<item value="com.kalai.project"/>
+			<item value="hibernate-first-project"/>
+			<item value="sd"/>
+			<item value="databinding-tesluko"/>
+			<item value="tesluko"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="493"/>
+		<item key="x" value="443"/>
+		<item key="y" value="27"/>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.CustomArchetypeDialog">
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="databinding-usingformc"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="databinding-usingform"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="/home/bas200193/spring-boot-learning/project/microservice/attempt-2/currency-exchange-service2"/>
+			<item value="/home/bas200193/spring-boot-learning/project/microservice/attempt-2/api-gateway"/>
+			<item value="/home/bas200193/spring-boot-learning/project/microservice/naming-server"/>
+			<item value="/home/bas200193/spring-boot-learning/project/microservice/attempt-2/currency-conversion-microservice"/>
+			<item value="/home/bas200193/spring-boot-learning/project/microservice/attempt-2/currency-exchange-service"/>
+			<item value="/home/bas200193/spring-boot-learning/project/microservice/attempt-2/spring-cloud-config-server"/>
+			<item value="/home/bas200193/spring-boot-learning/project/microservice/limits-service"/>
+			<item value="/home/bas200193/spring-boot-learning/project/microservice/attempt-2/limit-service"/>
+			<item value="/home/bas200193/Downloads/demo"/>
+			<item value="/home/bas200193/Downloads/springboot-in-10-steps"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

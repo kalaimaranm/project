@@ -1,0 +1,26 @@
+                                                                                                   Docker
+                                                                                                   
+           VM- Virtual Machine(sotha piri),(harddisk,ram)
+                  cons : - need dedicated seperate OS 
+                         - occupie bulk space(environment) individual VM
+                         - Isolation
+                         -                                                                              
+                         
+                         
+           Hypervisor
+                        - It is used to create multiple machines on a host operating system and it manage virtual machines              
+                        
+                        
+                        
+                        
+          windows docker will not run in linux os
+          linux docker will not run in windows os
+          
+  WSL- Windows sub-system for linux
+  
+  
+  
+  
+      Runtime 
+             runc       - works with the Operating system and start, stop the container
+             containerd - it manage runc, also helps in managing containers, pulling images                  

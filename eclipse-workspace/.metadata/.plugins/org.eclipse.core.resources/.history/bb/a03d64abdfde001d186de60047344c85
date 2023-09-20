@@ -1,0 +1,31 @@
+package com.kalai.hibernate.hibernate_first_project;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.kalai.hibernate.model.Song;
+
+public class App {
+	public static void main(String... args) {
+		System.out.println("Hibernate Application");
+
+		Song song = new Song();
+		song.setId(100);
+		song.setName("Beliver");
+		song.setArtist(" Imagine Dragon");
+
+		// loading the configuration file
+		Configuration configuration = new Configuration();
+		configuration.configure("hibernate.cfg.xml");
+
+		// creating sessionFactory - heavy weight
+		SessionFactory sessionFactory = configuration.buildSessionFactory();
+
+		// getting single session from sessionFactory
+		Session session = sessionFactory.openSession();
+
+		session.save(song);
+		System.out.println("song saved successfully....");
+	}
+}

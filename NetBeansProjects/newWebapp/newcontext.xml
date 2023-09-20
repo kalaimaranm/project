@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/newproject"/>
+<web-app>
+<servlet>
+    <servlet-name>name1</servlet-name>
+</servlet>
+<servlet-class> Addtion
+    <servlet-class>
+        <servlet-mapping>
+            <servlet-name>
+                name1
+            </servlet-name>
+            <url-pattern>/addd</url-pattern>
+        </servlet-mappigng>
+        </web-app> 

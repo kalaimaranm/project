@@ -1,0 +1,37 @@
+<classpath>
+  <container id="hotel!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="/home/bas200193/eclipse-workspace/hotel/WebContent/WEB-INF/lib/spring-webmvc-5.3.9.jar">
+      <source-attachment-path>/home/bas200193/Desktop/SpringFiles/spring-framework-source-code/spring-framework-main</source-attachment-path>
+    </entry>
+    <entry id="/home/bas200193/eclipse-workspace/hotel/WebContent/WEB-INF/lib/spring-context-5.3.9.jar">
+      <source-attachment-path>/home/bas200193/Desktop/SpringFiles/spring-framework-source-code/spring-framework-main</source-attachment-path>
+    </entry>
+  </container>
+  <container id="databinding-dynamic2!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="/home/bas200193/eclipse-workspace/databinding-dynamic2/WebContent/WEB-INF/lib/spring-webmvc-5.3.9.jar">
+      <source-attachment-path>/home/bas200193/Desktop/SpringFiles/spring-framework-source-code/spring-framework-main</source-attachment-path>
+    </entry>
+    <entry id="/home/bas200193/eclipse-workspace/databinding-dynamic2/WebContent/WEB-INF/lib/hibernate-validator-annotation-processor-6.2.5.Final.jar">
+      <source-attachment-path>/home/bas200193/Desktop/SpringFiles/spring-framework-source-code/spring-framework-main</source-attachment-path>
+    </entry>
+    <entry id="/home/bas200193/eclipse-workspace/databinding-dynamic2/WebContent/WEB-INF/lib/jakarta.validation-api-2.0.2.jar">
+      <source-attachment-path>/home/bas200193/Desktop/SpringFiles/spring-framework-source-code/spring-framework-main</source-attachment-path>
+    </entry>
+  </container>
+  <container id="spring-mvc-demo!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="/home/bas200193/eclipse-workspace/spring-mvc-demo/WebContent/WEB-INF/lib/spring-webmvc-5.3.9.jar">
+      <source-attachment-path>/home/bas200193/Desktop/SpringFiles/spring-framework-source-code/spring-framework-main</source-attachment-path>
+    </entry>
+    <entry id="/home/bas200193/eclipse-workspace/spring-mvc-demo/WebContent/WEB-INF/lib/spring-context-5.3.9.jar">
+      <source-attachment-path>/home/bas200193/Desktop/SpringFiles/spring-framework-source-code/spring-framework-main</source-attachment-path>
+    </entry>
+    <entry id="/home/bas200193/eclipse-workspace/spring-mvc-demo/WebContent/WEB-INF/lib/spring-web-5.3.9.jar">
+      <source-attachment-path>/home/bas200193/Desktop/SpringFiles/spring-framework-source-code/spring-framework-main</source-attachment-path>
+    </entry>
+  </container>
+  <container id="house!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="/home/bas200193/eclipse-workspace/house/WebContent/WEB-INF/lib/spring-context-5.3.9.jar">
+      <source-attachment-path>/home/bas200193/Desktop/SpringFiles/spring-framework-source-code/spring-framework-main</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

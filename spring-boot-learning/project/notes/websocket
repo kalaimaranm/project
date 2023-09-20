@@ -1,0 +1,33 @@
+                                                                  Web-Socket(Bi-Directional)
+                                                                  
+                                                                  
+         
+         
+         
+         Client ------------------------------------------------------->      Server
+                                      Request                            
+                <-------------------------------------------------------      
+                                      Hand Shake
+               <--------------------------------------------------------
+                                      Web Socket
+                                      
+                                      
+                                      
+                                      
+                                      
+       Client ------------------------------------------------------->      Server
+                                      Request                            
+                <-------------------------------------------------------      
+                                      Response
+                                      
+              -------------------------------------------------------------
+                             Connection terminated
+                             
+                             
+                             HTTP 1.1 added this  functionality even though it is same like request response
+                             101 switiching protocol
+                                                                                      
+                                      
+                                      
+                                                              
+                                                                                                                

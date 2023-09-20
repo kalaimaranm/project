@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>password</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name = "login" onsubmit="kmySubmit()" action = "customercontroller" method = "POST">
+            <input type="password" id="raw_password" name="raw_password" />
+            <input type="hidden" id="j_password" name="j_password" />
+
+            <input type="submit" />
+        </form>
+
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/2.0.2/sha.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+        <script>
+            function mySubmit() {
+
+                document.login.j_password.value = CryptoJS.MD5(document.login.j_password.value);
+            }
+            //                var rawPassword = document.login.raw_password.value;
+//                var hashObj = new jsSHA("SHA-512", "TEXT", {numRounds: 1});
+//                hashObj.update(rawPassword);
+//                var cipher = hashObj.getHash("HEX");
+//                document.login.raw_password.value = cipher;
+//                //                    document.getElementById('j_password').value = cipher;
+//                console.log(rawPassword);
+//                console.log(cipher);
+        </script>
+
+
+    </body>
+</html>

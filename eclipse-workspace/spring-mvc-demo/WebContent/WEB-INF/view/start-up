@@ -1,0 +1,16 @@
+
+
+structure of project  && creation of project
+
+                                                      Project Creation
+
+
+1. Create new project (Dynamic web project)
+3. Remove build path(src\java\main) and create src file - java code
+4. Remove web path(webpages) and create WebContent - jsp, xml
+5. Create lib folder inside WEB-INF
+6. Create view folder inside WEB-INF
+7. Create servlet(anyname).xml for mapping inside WEB-INF
+8. Create web.xml for IOC,Validation,formating,mvc-annotation inside WEB-INF
+9. Add JSTL1,JSTL2 jar file inside lib and  spring jar file
+10.Create .jsp page inside view folder.

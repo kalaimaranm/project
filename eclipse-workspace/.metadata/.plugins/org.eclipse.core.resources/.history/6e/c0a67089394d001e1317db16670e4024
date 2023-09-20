@@ -1,0 +1,5 @@
+package com.in28minutes.microservice.currencyconversionmicroservice.model;
+
+public class Todos {
+
+}

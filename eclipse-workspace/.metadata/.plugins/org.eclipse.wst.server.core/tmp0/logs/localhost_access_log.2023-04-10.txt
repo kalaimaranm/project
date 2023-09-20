@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:01:01:25 +0530] "GET /databinding-dynamic2/controller/signup HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:01:01:32 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 500 8539
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:01:04:54 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 200 2327
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:01:05:01 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 200 2327
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:01:05:10 +0530] "POST /databinding-dynamic2/signup HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:01:06:18 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 200 1992
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:01:06:25 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 200 1992
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:01:06:29 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 200 1992
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:01:06:41 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 200 1992
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:01:06:45 +0530] "POST /databinding-dynamic2/signup HTTP/1.1" 200 2255
+0:0:0:0:0:0:0:1 - - [10/Apr/2023:09:55:21 +0530] "GET /favicon.ico HTTP/1.1" 404 762

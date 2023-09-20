@@ -1,0 +1,53 @@
+                                                                JAVA - 8
+                                                                
+                                                                
+                                                                Lamba Expression
+                                             
+                                             
+                                             
+                                             
+                                                               Functional Interface(polymorphism to functional interfacec,oops to functional programming, avoid creating object, passing a behaviour function as parameter to another function,writing only logic)
+                                                                                  
+                                
+                                - Lamba expression is annonymous function it does not have name
+                                - Functional Interface were introduced in java 8
+                                - An Interface that contains exactly one abstract method is known as a functional interface
+                                - Functional interface can have any number of default,
+                                                                              static methods
+                                                                              but can contain only one abstract method
+                                - don't want to mention type in method parameter
+                                
+                                @FunctionalInterface - to mark the interface as a functional interface 
+                                                     - show compile time error
+                                                     
+                                                     
+                                                     Runnable 
+                                                     
+                                                     Functional Interface in java
+                                     Functional  - apply()    - T,R                
+                                     Consumer    - accept()   - T
+                                     Supplier    - get()      - R
+                                     
+                                     
+                                                
+                                                
+                                                
+                                                  Method Reference(functional method inside only refering method)
+                                                  
+                                     4 method references   
+                                     
+                                     1. static method reference
+                                     2. instance method reference
+                                     3. constructor reference
+                                     
+                                     It reduce the writing functional interface method
+                                              L.H.S == R.H.S
+                   method-argument & method return type(L.H.S) == method-argument & method return type(R.H.S)
+                                     
+                                     
+                                     
+                                     
+                                     method reference method should have same signature and return type of functional interface method
+                                               
+                                     
+                                                                                                   

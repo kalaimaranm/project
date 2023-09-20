@@ -1,0 +1,44 @@
+                                                     Excepional Handling
+                                                     
+                                                     
+            Dont show the stack trace in browser and sending meaningfull message to client   
+            
+            Try:   To keep risky code
+            Catch: To handle exception
+            Throw: To throw Exception to caller
+            Throws:To ignore Exception
+            Finally:Clean up code
+            
+            
+            before spring 3.2 the two main approaches to handling exception in spring mvc HandlerExceptionResolver or @ExceptionalHandler
+            
+            3.2 @ControllerAdvice for whole application
+            
+                  Different way of handling exception
+                  
+                  1. Controller based handling - writing @ExcetionalHandler inside the controller it is applicable only for that controller
+                  2. Global Exception handler  - @ControllerAdvice() for entire application or any controller acquiring exception
+                                               - when to send same message for two different exceptiona can handle in single handler method      
+                  
+                  
+                  App/GlobalExceptionHandler  
+                     handleNullPointerException
+                     
+                       @RestControllerAdvice   ==   @RestController
+               @RestControllerAdvice == @ResponseBody + @ControllerAdvice(@Component)
+               All the exception are handled for controller       
+               
+               use @Controller + @ResponseBody
+               
+               
+               
+                                                      Duplicate form submission(Double posting scenario)
+                                                      
+                                                      
+                                    fill the form -> submit -> id generated response send to client -> again refresh the page
+                                    
+                                     PRG - Post Redirect Get design pattern
+                                     
+                                     changing the client request from post to get by sending redirect get, get request from the client 
+                                     
+                                                 

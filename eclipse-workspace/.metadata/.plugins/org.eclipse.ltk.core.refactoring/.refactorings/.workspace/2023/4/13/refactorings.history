@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;databinding-dynamic&apos;" deleteContents="false" description="Delete resource &apos;databinding-dynamic&apos;" element1="/databinding-dynamic" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1680318209216"/>
+</session>

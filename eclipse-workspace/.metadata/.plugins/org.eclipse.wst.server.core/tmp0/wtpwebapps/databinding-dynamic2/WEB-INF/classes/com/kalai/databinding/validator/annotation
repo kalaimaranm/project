@@ -1,0 +1,14 @@
+
+
+                                           Annotation
+                                           
+                                           
+  1.  If you have only one field(method()) in customer(@interface) annotation 
+                declare the field(method()) name as value and directly give the value for 
+                the value filed.  
+                
+  2. Always keep the message = "" in property file (default message)              
+                
+                
+ NOTE: 
+       1. Always return false - which mean write condition for negative(should not be).                                             

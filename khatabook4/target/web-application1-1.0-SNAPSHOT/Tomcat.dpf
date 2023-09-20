@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/khatabook4">
+  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc/myDB" localDataSource="true" roleNameCol="role" userCredCol="password" userNameCol="user_id" userRoleTable="login_credential" userTable="login_credential"/>
+  <Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxIdle="1" maxTotal="2" maxWaitMillis="-1" name="jdbc/myDB" password="Kalai@4321" type="javax.sql.DataSource" url="jdbc:mysql://bassure.in:3306/kalaimaran_db" username="Kalai"/>
+</Context>

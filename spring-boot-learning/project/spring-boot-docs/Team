@@ -1,0 +1,56 @@
+                                                           Team
+                                                           
+                                                           
+                                                           
+                         
+                         
+                         
+                         
+                   Team-1
+                   
+                   Natraj
+                   Dinesh
+                   Karpaka
+                   Vijay-Anadh
+                   Jobin
+                   Asif
+                   
+                   
+
+                   
+                   Team-2
+                   
+                   Deepan
+                   Monisha
+                   Bala
+                   Arunkumar
+                   Kalaimaran
+                   
+                   
+                   
+                   Team-3
+                   Arunchalam
+                   Naveen
+                   Baranipriya
+                   Vengat
+                                      
+                   
+                   
+                   
+                   
+                   
+                   
+                   Team-4 
+                   
+                   Chandhini
+                   Rubika
+                   dinakaran
+                   
+                   
+                   spring.jpa.show-sql=true
+                   -Dserver=8001
+                   spring.datasource.url=jdbc:h2:mem:testdb
+                   spring.h2.console.enabled=true
+                   spring.jpa.defer-datasource-initialization=true
+                   
+                                                          

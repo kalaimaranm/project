@@ -1,0 +1,61 @@
+                                                                                                Mocking(isolated testing,to avoid dependent)
+                                                                                                
+                                                                                                
+       - used to isolation testing
+       - dummy object dummy data
+       - Mocking is a process used in unit testing when the unit is being tested has external dependency
+       - Instead of calling real class we just mocking that class what real class do
+       - process of creating real object in mock/ imitating object
+       
+       
+       
+       
+       Types of Mock framework 
+       
+             1. Stub based Mock frameworks  - final class and method cannot be mock, private method cannot be mock
+             2. ByteCode Manipulation Based Mock frameworks    or    class Remapping Mock framework                                                                      
+             
+             
+             
+             In application we will be having below layers
+             
+              1. Presentation layer
+              2. Web layer
+              3. Business layer
+              4. Presistence layer
+              
+   When to use mocking?(component dependent on other component or third party api)
+       
+              1. When dependent component are not ready then go for mocking
+              2. To isolated our component            
+              3. while your making third party api call 
+              
+              
+              
+       Two Types of Mock framework 
+       
+              1. Proxy Based Mock frameworks (proxy class will create at runtime)
+                 EX : Easy and Mockito
+                 
+             Limitation: 
+                    Does n't support for private method mocking
+                    Does n't support for final class and final method mocking
+                    Does n't support for static method mocking
+              
+              2. Byte code Manipulation Mock frameworks (use in project) 
+                 EX : Power Mock and JMokito          
+                 
+                 
+                 
+           code : 
+               BrandDao brandDaoProxy = EasyMock.createMock(BrandDao.class)  -  BrandDao is  interfact 
+                
+                
+                BrandServiceImpl brandService = new BrandServiceImpl();
+                brandService.setBrandDaoImpl(brandDao);   
+                 
+                 
+                EasyMock.expect(brandDaoProxy.findById(101)).andReturn("Ashok");
+                EasyMock.expect(brandDaoProxy.findById(102)).andReturn("Albin");
+                
+                 

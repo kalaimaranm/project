@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;spring-love-calculator&apos; to &apos;spring-l-calculator&apos;" description="Rename resource &apos;spring-love-calculator&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/spring-love-calculator" name="spring-l-calculator" stamp="1676894360799" updateReferences="true"/>
+</session>

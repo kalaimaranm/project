@@ -1,0 +1,48 @@
+                                                                 Rabbit-MQ
+                                                                 
+                                   
+                                   
+                                   
+             what is Message Queue?
+                  It allows applications to communicate by sending messages to each other. 
+                  The message queue procides temporary message storage when the destination program is busy or not connected.
+                  MQ is made up of producer and consumer
+                  MQ is an asynchronus communication between applications.
+                                        
+             what is Rabbit MQ?
+                 RabbitMQ is a message queue software (message broker/queue manager) that acts as a intermediate platform send and receive message
+                 RabbitMQ originally implemented by AMQP but now it supports several API like STOMP, MQTT and HTTP
+                                    
+                 looks-like
+                    Producer  -> Exchange   ->  Queue   ->  Consumer                  
+                                   
+                           AMQP- Advanced Message Queue Protocol
+                           Multiple Queue with Multiple Consumer
+                                                                 
+                                                                 
+  Producer:
+        Producer is an application that sends messages. It does not send message directly to the consumer. It send the message only to the Rabbit MQ Broker
+       
+ Consumer:
+       Consumer is an application that read messges. 
+       Multiple consumer can subscribe to MQ
+       
+ Queue: 
+       Queue is a buffer or storage in broker used to store the messages
+       Once the message is produced and post in the Queue and read by the consumer It is consumed and removed from the queue
+   
+ Mesage:
+       Message is Information that is send by the producer to the consumer through the queue
+       
+ Exchange:
+       It is intermediate between producer and queue
+       Instead of sending message directly to queue 
+       Message is send to the exchange then exchange will send to one or more queue with specified set of rule
+       
+ Routing Key: while using multiple queue
+       It is used to route the message where the message should in which queue to send
+       It is like address for the message
+       
+ Binding :
+       It is link between queue and exchange
+                                                                                                             

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.Fresh.Hotels.Configration&apos; to &apos;Configuration&apos;&#x0A;- Original project: &apos;Hotels&apos;&#x0A;- Original element: &apos;com.Fresh.Hotels.Configration&apos;&#x0A;- Renamed element: &apos;com.Fresh.Hotels.Configuration&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Configration&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.Fresh.Hotels{Configration.java[Configration" matchStrategy="1" name="Configuration" qualified="false" references="true" similarDeclarations="false" stamp="1672205167193" textual="false" version="1.0"/>
+</session>

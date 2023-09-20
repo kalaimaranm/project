@@ -1,0 +1,24 @@
+## YAML Template.
+---
+server:
+  port: 9080
+spring:
+  datasource:
+    driver-Class-Name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://bassure.in/kalaimaran_db
+    password: Kalai@4321
+    username: Kalai
+    hikari:
+      maximum-pool-size: 2
+  mvc:
+    view: 
+      prefix: /WEB-INF/pages/
+      suffix: .jsp
+        
+  
+logging.level.root: debug
+#   logging:
+#     level:
+#         root: debug
+          
+    

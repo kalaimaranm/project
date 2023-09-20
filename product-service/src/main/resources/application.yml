@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://dhinakaran18:D!%401808@bassure.in:27017/dhinakaran_db

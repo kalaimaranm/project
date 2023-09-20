@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>ServletAddition.proj1</servlet-class>
+        <init-param>
+            <param-name>username</param-name>
+            <param-value>kalaim123</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>kalai123456789</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/addition</url-pattern>
+    </servlet-mapping>
+        <servlet>
+        <servlet-name>servlet2</servlet-name>
+        <servlet-class>ServletAddition.proj2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet2</servlet-name>
+        <url-pattern>/addition</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>kalaimaran123</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>kalai123456789</param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>doj</param-name>
+                <param-value>16-02-2000</param-value>    
+    </context-param>
+</web-app>

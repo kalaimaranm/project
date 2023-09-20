@@ -1,0 +1,45 @@
+package com.kalai.lc.config;
+
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+@EnableWebMvc
+public class LcApplicationInitializer implements WebMvcConfigurer {
+
+	@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+
+		registry.addViewController("/").setViewName("index");
+	}
+	
+
+}
+
+//public class LcApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+//
+//	@Override
+//	protected Class<?>[] getRootConfigClasses() {
+
+//		System.out.println("hello .........");
+//		return null;
+//	}
+//
+////	@Override
+////	protected Class<?>[] getServletConfigClasses() {
+////		return new Class[] {AppConfig.class};
+////	}
+//
+//	@Override
+//	protected String[] getServletMappings() {
+//		return new String[] {"/"};
+//	}
+//
+//@Override
+//protected Class<?>[] getServletConfigClasses() {
+//	// TODO Auto-generated method stub
+//	return null;
+//}
+//
+//}

@@ -1,0 +1,6 @@
+com/bassure/model/Product.class
+com/bassure/transaction/SpringTransaction.class
+com/bassure/service/ProductService.class
+com/bassure/dao/ProductDAO.class
+com/bassure/transaction/ConfigurationClass.class
+com/bassure/dao/ProductDAOImpl.class

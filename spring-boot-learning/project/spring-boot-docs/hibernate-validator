@@ -1,0 +1,21 @@
+                                                                  HIBERNATE-VALIDATOR
+                                                                  
+                                                                  
+                                                                  
+                     validating the data from the client with certain conditions                                             
+                     
+                     
+                     
+                     @NotBlank  == NotBlank && NotNull
+                     @NotNull
+                     @Size    - used for String, Collection, Map
+                     @Length  - used specifically for String 
+                     @Email
+                     @Positive
+                     @Negative
+                     @PositiveOrZero
+                     @NegativeOrZero
+                     @Future
+                     @FutureOrPresent
+                     @Past
+                     @PastOrPresent

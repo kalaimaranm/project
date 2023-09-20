@@ -1,0 +1,16 @@
+package com.kalai.microservice.address.addressservice.service;
+
+import org.springframework.stereotype.Service;
+
+import com.kalai.microservice.address.addressservice.entity.Address;
+
+@Service
+public class AddressService {
+	
+	
+	public boolean saveAddress(Address address) {
+		
+		
+	}
+
+}

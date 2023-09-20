@@ -1,0 +1,90 @@
+
+
+
+
+username & password 
+
+use kalaimaran; 
+
+db.createUser({user:'kalaimaranm',pwd:'Kalai@4321',roles:[{role:'readWrite',db:'kalaimaran'}]});
+
+NOTE :
+ 
+   If your username is my:user and your password is pass@word, you should encode them as my%3Auser and pass%40word, respectively.
+
+  But if your YAML implementation has a problem with it, you potentially have lots of options: 
+
+- url: 'http://www.some-site.example/'
+- url: "http://www.some-site.example/"
+- url:
+    http://www.some-site.example/
+- url: >-
+    http://www.some-site.example/
+- url: |-
+    http://www.some-site.example/
+    
+    
+    
+    
+    methods 
+       1. findByAgeBetween(Integer minAge, Integer maxAge);
+       2. findByFirstNameStartsWith(String firstName);          - fieldName + Operation
+       3. 
+       
+       
+       
+   field: 
+       0 - dont need
+       1 - need
+       
+       fields = "{addresses:0}"
+       
+       
+                                  MongoTemplate
+                                  
+                           It is a part of spring boot
+                           
+                           
+                                  MongoTemplate(it is build on top of mongo client, it is part of framework)
+                                      ^
+                                      |
+                                   MongoClient(it is provided by mongodb and its part of mongo-Driver)
+                                      ^
+                                      |
+                                   MongoDB         
+                           
+                           
+                        Pageable pageable = PageRequest.of(page, size);
+                        
+                mongo operation is parent class of mongo template
+                
+                
+  Mongo-template and Mongo-operations
+  
+              Both are part of org.springframework.data.mongodb.core package
+              MongoTemplate is implementation of MongoOperations
+              MongoTemplate use mongoclient internally
+              
+             Document - it is type (JSON) type
+             
+                insert(document, "collection_name"); - return document 
+                
+                
+                updateFirst()
+                     Query query = new Query(Criteria.where("_id").is(id));
+                     Update update = new BasicUpdate(object);
+                     UpdateResult result = mongoTemplate.updateFirst(query, update, "collection name");
+                                  result.getModifiedCount();
+                                  
+               remove()
+               
+                   Query query = new Query(Criteria.where("_id").is(id));
+                
+                   DeleteResult result = mongoTemplate.remove(query, "collection name");
+                                result.getDeletedCount();     
+           
+             
+             
+             MongoTemplate doesnot support pagination directly and sorting By default                 
+                           
+                                  

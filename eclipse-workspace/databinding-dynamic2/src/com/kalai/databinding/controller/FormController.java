@@ -1,0 +1,107 @@
+package com.kalai.databinding.controller;
+
+import java.beans.PropertyEditorSupport;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.List;
+import java.util.Objects;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.kalai.databinding.dao.FormCRUD;
+import com.kalai.databinding.dto.User;
+import com.kalai.databinding.dto.UserRecord;
+
+@Controller
+public class FormController {
+	@Autowired
+	FormCRUD formCRUD;// = new FormCRUD();
+
+//	@ResponseBody
+	@RequestMapping("/home")
+	public String home() {
+
+		return "home";
+//		return "/WEB-INF/view/home.jsp";
+//		return "home";
+	}
+
+	@RequestMapping("/signin")
+	public String login(@RequestParam() String email, @RequestParam() String password)
+			throws ClassNotFoundException, SQLException {
+		if (Objects.nonNull(formCRUD.getUser(email, password))) {
+			return "detail";
+		}
+		return "home";
+
+	}
+
+	@RequestMapping("/")
+//	@RequestMapping("/signupform")
+	public String signupEmpty(@ModelAttribute("userRecord") User userRecord, BindingResult result) {
+//           User user = new User();
+//           model.addAttribute("user",user);
+//	return "/WEB-INF/view/signup.jsp";
+		return "signup";
+	}
+
+	@RequestMapping("/signup") // this is name of model object which is used in front end -- another is user in
+	// java code
+	public String signup(@Valid @ModelAttribute("userRecord") User userRecord, BindingResult result)
+			throws ClassNotFoundException, SQLException {
+
+//		System.out.println("container checking");
+//		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("/WebContent/WEB-INF/beans.xml");
+//		System.out.println(context.getBean("messageSource"));
+		System.out.println("user Name is : |" + userRecord.getName() + "|");
+		System.out.println("error is present in Binding Result : " + result.hasErrors());
+		System.out.println("terms & condition of user : " + userRecord.isAgreeCondition());
+		List<ObjectError> errors = result.getAllErrors();
+		System.out.println("errors are : ");
+		for (ObjectError error : errors) {
+			System.out.println(error);
+		}
+		if (result.hasErrors()) {
+			System.out.println("validator worked has an error");
+			return "signup";
+		} else if (!result.hasErrors()) {
+//			if (formCRUD.creatAccount(userRecord)) {
+//				System.out.println("inside record");
+			return "detail";
+//			}
+//			System.out.println("no error occured in binding....");
+		}
+
+		return "signup";
+//		return "WEB-INF/view/signup.jsp";
+//		return "/WEB-INF/view/failed.jsp";
+	}
+
+	public String update(@ModelAttribute UserRecord userRecord) {
+
+		return "detail";
+	}
+
+	@InitBinder
+	public void initBinder(WebDataBinder webDataBinder) {
+		System.out.println(">>>>>>>>>>>>>> inside initBinder() method <<<<<<<<<<<<<<<<");
+		StringTrimmerEditor editor = new StringTrimmerEditor(true);
+		webDataBinder.registerCustomEditor(String.class, "name", editor);
+//		webDataBinder.setDisallowedFields("name"); // Here they used varags....
+		SimpleDateFormat dateFormat = new SimpleDateFormat();
+		PropertyEditorSupport od = new PropertyEditorSupport();
+
+	}
+
+}

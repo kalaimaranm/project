@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/newproject"/>
+<servlet>
+    <servlet-name>additonn</servlet-name>
+</servlet>
+<servlet-class> Addtion
+    <servlet-class>
+        <servlet-mapping>
+            <servlet-name>
+                additionn
+            </servlet-name>
+            <url-pattern>/add</url-pattern>
+        </servlet-mappigng> 

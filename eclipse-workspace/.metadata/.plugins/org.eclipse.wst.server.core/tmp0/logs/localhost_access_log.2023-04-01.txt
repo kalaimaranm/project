@@ -1,0 +1,14 @@
+127.0.0.1 - - [01/Apr/2023:11:51:14 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:11:51:16 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:11:51:27 +0530] "GET /databinding-dynamic2/controller/home HTTP/1.1" 500 10393
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:11:52:42 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:11:52:42 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:11:52:52 +0530] "GET /databinding-dynamic2/controller/home HTTP/1.1" 200 4
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:11:58:40 +0530] "GET /databinding-dynamic2/controller/home HTTP/1.1" 200 138
+127.0.0.1 - - [01/Apr/2023:23:00:55 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:23:00:56 +0530] "GET /databinding-dynamic2/ HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:23:00:57 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:23:01:07 +0530] "GET /databinding-dynamic2/controller/signupform HTTP/1.1" 400 762
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:23:10:42 +0530] "GET /databinding-dynamic2/controller/signupform HTTP/1.1" 200 1191
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:23:10:43 +0530] "GET /databinding-dynamic2/controller/signupform HTTP/1.1" 200 1191
+0:0:0:0:0:0:0:1 - - [01/Apr/2023:23:10:44 +0530] "GET /databinding-dynamic2/controller/signupform HTTP/1.1" 200 1191

@@ -1,0 +1,112 @@
+                                                                                            JUnit Testing(Component testing)
+                                                                                            
+                                                                                            
+                                                                                            
+    What is unit(component) testing & why?
+     
+            A unit may be an individual function, method, procedure, module or object
+            Test case should cover your all source code
+            Individual component or unit testing in code
+            The written code is working as expected
+            Method is working as expected or not
+            Developer is responsible for writing unit testing during development phase
+            Quality developer
+            
+            
+    Isolation testing 
+           Individual testing for each method controller method, service method, repository method each method should run in unit testing
+           
+    Automated unit testing
+       
+           1. junit - framework, open source - free, for java application
+                    - developed by kent Beck and Erich Gamma
+                    - first version released 1997
+                    
+                           Junit 5 Architecture(JVP)
+                    - junit 5 contains 3 modules or platform
+                       1. Junit Jupiter - backward compatbility, you can use junit 4 or junit 3.... in junit 5(like in current java 20 support stream)
+                       2. Junit vintage - new annotation/asseresion 
+                       3. Junit platform - It provide environment to run junit test(Intellij IDE, Eclipse IDE, Jenkins, Maven/Gradle)
+                       
+                       
+                    
+   Manual unit testing
+         
+            just call the method and test
+            debugging
+            
+   Assertion 
+            
+           It is used to expected value is equal to actual value
+           
+           
+           
+    @Test
+       
+       -When you annotate a method then the class became junit class(check run)     
+    
+    @BeforeAll
+    
+       - Run the method before all the test method run (run only once)                               
+                                                                                                    
+    @AfterAll
+     
+       - Run the method after all the test method run (run only once)
+       
+    @BeforeEach
+    
+       - Run the method before each test method run (run each test method run)
+       
+    @AfterEach
+    
+       - Run the method after each test method run (run each test method run)
+       
+    @ParameterizedTest
+    
+       - To pass multiple parameter(value) for single test method                                                                                                          
+       
+    @valueSource
+    
+       - To pass multiple parameter
+       
+    @CsvSource
+    
+       - To pass multiple parameter in csv format
+    
+    @CsvFileSource
+    
+       - to pass multiple parameter in csv format in file
+      
+    @MethodSource
+    
+       - To method as a parameter (method return value is passed as a parameter)
+       
+    @RepeatedTest
+    
+       -To run same test method for multiple time
+       
+    @Disable
+    
+       -To disable the test method to run
+       
+                             
+                                                                            Junit Assertion method         
+                 
+                 
+              1. assertEquals assertNotEquals
+              2. assertTrue   assertFalse
+              3. asserNull    assertNotNull
+              4. assertSame   assertNotSame
+              5. assertThrows  - assertThrows(IllegalArgumentException.class, ()-> StringUtils.methodname(argument)); 
+              
+              
+              
+              
+    @ParameterizedTest
+    @CsvFileSource(resources = "/data.csv", numLinesToSkip = 1)
+    public void evenOrOdd(String input, String expected) {
+    
+    }
+    
+    file should be inside src/main/resources same like src/test/resources/data.csv
+              

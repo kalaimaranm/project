@@ -1,0 +1,114 @@
+                                                                   Microservice
+                                                       
+                          https://github.com/in28minutes/spring-microservices-v2/tree/main/02.restful-web-services
+                          
+                          Webservice are built to speak wit Human to machine interaction
+                          
+                          CDN? - Expensive
+                          objects-storage(s3)
+                          SSS- Simple Storage Service
+                          
+                                                     DB(types)
+                          1. database server per service
+                          2. database per service()
+                          3. private table per service(granting permission(table) for service)
+                          
+                          cookie-cutter model(different application for different client)
+                          
+                          what is Webservice?
+                              - Designed for machine to machine (or application to application) interaction
+                              - Should be interoperable- Not platform dependent
+                              - Should allow communication over a network
+                              - To interact with one another with common format(platform independent java, Ruby, Golang) XML or JSON
+                              
+                              
+                                  Service Definition
+                                  
+                                  1. Request/Response format - JSON,XML
+                                  2. Request Structure       - what are the data
+                                  3. Response Structure      - what are the data
+                                  4. Endpoint                - which function to call
+                                  	
+                                 Key Terminology
+                                 
+                                  1. Request and Response
+                                  2. Message Exchange Format
+                                     1. XML and JSON
+                                  3. Service Provider(Server)
+                                  4. Service Consument(Client)
+                                  5. Service Definition
+                                  6. Transport
+                                      1. HTTP and MQ
+                                  
+                                  
+                                  
+                                  
+                                    Web Services Groups
+                                    
+                                 1. SOAP - based - Simple Object Access Protocol(XML)
+                                 2. REST - based - Representational State Transfer
+                                 
+                                 
+                                 SOAP:
+                                   - SOAP defines specific XML request/response structure
+                                   - Structure name - SOAP ENVELOP
+                                   
+                                    SOAP-ENV: Envelop
+                                   _______________________________
+                                  |                               |
+                                  |                               |
+                                  |  SOAP-ENV: Header             |
+                                  |             Auth & Authenti   |
+                                  |                               |
+                                  |                               |
+                                  |                               | 
+                                  |  SOAP-ENV: Body               |
+                                  |                               |
+                                  |                               |
+                                  |                               |
+                                  |                               | 
+                                  |                               |  
+                                  |_______________________________|    
+                                  
+                                  
+                                 Service Definition: WSDL(Web Service Definition Language)
+                                 
+                                 
+                                REST: Representational State Transfer
+                                
+                                  Roy who developed HTTP also developed REST
+                                  REST is an architectural
+                                  
+                                  
+                                  
+                                  No strict data exchange format (XML/JSON)
+                                   
+                                 
+                            Configuration:
+                               - Spring Boot 3.X Need Java 17 or above
+                               - Spring Web - By default Tomcat, Rest
+                               - JPA
+                               - H2
+                               - Dev tools
+                               
+                               
+                            What happening in background? (logging.level.org.springframework = debug/info)
+                            1. How are our request handled?
+                               dispatcher servlet urls = [/]
+                            2. Autoconfiguration?
+                                DispatcherServletAutoConfiguration
+                            3. How Object to JSON?
+                                1. @ResponseBody()
+                                2. JacksonHttpMessageConvertersConfiguration
+                            4. who is configuring error message?
+                                ErrorMvcAutoConfiguration
+                            5. sprig-boot-starter
+                                dependency
+                                                    
+                           
+                          NOTE:
+                           
+                           String.format("name is , %s",name);    
+                           Patch - used to update part(data) of existing user
+                                                        
+                                                       

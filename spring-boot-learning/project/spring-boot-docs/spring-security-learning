@@ -1,0 +1,25 @@
+                                                          Spring-Security
+                                                          
+                                                          
+                        spring-web-mvc
+                        
+                        spring-web-flux - based on reactive programming(functional programming)
+                        POM-Project Object Model
+                        
+                        BOM-Bill Of Material
+                        Dependecy Mangement -> dependcies-> BOM
+                        
+                        
+                        BFF- Backend for Frontend(Pattern)
+                        
+                        OIDC - Open ID connect         (is build on top of SSO)
+                        SSO  - Single Sign On
+                             SAML - Security Accertion Markup Language(old)
+                             OAuth                                    (new)
+                             
+                       what is mean by X50s?   
+                       Text block in java?
+                       
+                          
+                             
+                                                          

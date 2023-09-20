@@ -1,0 +1,51 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://dhinakaran18:D!%401808@bassure.in:27017/dhinakaran_db
+      
+      
+#product:
+#  custom:
+#    http-status-code:
+#      successCode: 600
+#      errorCode: 602
+
+      
+      
+inventory:
+  statuscode:
+    success: 600
+    FIELD_VALIDATE: 601
+    error: 602
+    geoFencing: 603
+    resourceNotFound: 604 
+    tokenUpdate: 605
+    timeOut: 606
+    noData: 607
+    authorize: 608
+    wrongEndPoint: 609
+    duplication: 610
+    failed: 611
+    serverError: 650
+    noNetworkConnection: 651
+    
+  statusmessage:
+    success: The request has succeeded
+    FIELD_VALIDATE: 601
+    error: 602
+    geoFencing: 603
+    resourceNotFound: 604 
+    tokenUpdate: 605
+    timeOut: 606
+    noData: 607
+    authorize: 608
+    wrongEndPoint: 609
+    duplication: 610
+    failed: 611
+    serverError: 650
+    noNetworkConnection:
+    
+      
+        
+    
+    

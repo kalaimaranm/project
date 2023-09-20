@@ -1,0 +1,12 @@
+package com.Fresh.Hotels;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class JavaConfigApp {
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+//		Hotel hotel = context.getBean("burgerKing",Hotel.class);
+//		System.out.println(hotel.menu());
+		System.out.println("Java Config class loaded...");
+	}
+}

@@ -1,0 +1,175 @@
+                                                                   Database Design
+                                                                   
+                                      sign up store the data and allow the user to use
+                                      sign in use the stored data and allow the user to use                             
+                                      
+                                      
+                                      
+                                                             How spread-sheet is differ from DB              Table == Entity == File
+                                      selective information                                                  Row == tuple == record == entity
+                                      searching selective customer is easy                                   column == attribute == field
+                                      we can't segregate the table                                           value == data 
+                                      Not secured                                                            Entry == Row insertion	
+                                      
+                                      
+                                                             What is Relational Database?
+
+                                     Relation is connection between data
+                                     
+                                                              Entity
+                                                 
+                                    Is anything that stores data
+                                    Individual rows(tuple)
+                                    
+                                    Type: User, Order
+                                    
+                                                              Attribute(column)
+                                       
+                                   The data we store
+                                   
+                                   Type : username, age, password
+                                   
+                                                           RDBMS
+                                                           
+                                   Relational Database Management System
+                                   Run fancy query to get specific result
+                                      eg:view machanism - all the transaction between 2011 to 2012
+                                                        - select username, password from user;
+                                                        
+                                                        
+                                                        SQL
+                                                        
+                                  programming language used to communicate with a database                      
+                                  Meddiator between human and machine
+                                  Defines(create) DDL(structure), Manipulate data(insert, update)DML  	                     
+                                  Joins important
+                                             
+                                                       Naming Conventions
+                                                       
+                                  Table : user
+                                  attribute: user_id  (underscore mean space)
+                                             user_id fk name should be same in pk and fk
+                                             
+                                             
+                                                      Database Design
+                                                      
+                                   1. Data Integrity(pk,fk) - all the data are connected, there is no disconnected data
+                                                            - No repeating data 
+                                                            - Upto date data
+                                                           
+                                                           Schema
+                                                           
+                                  1. Conceptual-
+                                  2. Logical  - Not allowing every one to access DB
+                                  3. Physical - on which server or storage are we going to run the DB
+                                                           
+                                    dont repeat the data in same table because if you update in one data if it exist in two row 
+                                    
+                                                          Data Integrity
+                                                          
+                                  1. Entity Integrity - unique data using ID 
+                                  2. Referential Integrity - one table is connected with another table(user-sale)(PK-FK)
+                                  3. Domain Integrity - only store the data with respective DATA-TYPES
+                                                          
+                                                          
+                                  
+                                                          Data-types
+                                  1. Integer
+                                  2. Text
+                                  3. Date
+                                  
+                                                         Database-Terms
+                                                         
+                                  1. Null - no data in that column
+                                  2. Anamolies - if you update one column it updates 10 colunmn 
+                                  3. File == Table
+                                  
+                                  
+                                                         SQL Keyword
+                                                         
+                                  1. SELECT
+                                  2. 
+                                  
+                                  
+                                                         Atomic Value(1 THING)
+                                                         
+                                  1. seperate into different name : kalaimaran Madhavan -> first_name: kalaimaran, last_name: madhavan
+                                                                   - don't store multiple thing in one column (column values should be i singular)
+                                                         Relation-ship
+                                                         
+                                  1. Every entity are relational to another entity
+                                        Types 
+                                        1. One to One   - Person --> SSN(Social Security Number)
+                                        2. One to Many  - Person --> Address
+                                        3. Many to Many - Student -> Class
+                                        
+                                                        Design Relationship
+                                  1. One to One
+                                  
+                                      Mostly we store the one to one relationship data in single table like user and user credential
+                                      Some case we have to split the table into two 
+                                         eg: cardholder --> card_details
+                                         Table                             Table
+                                      Cardholder[card_details_id]  --> card_details[card_details_id]   
+                                  2. One to Many
+                                     
+                                      One person can have multiple address
+                                         eg: Person --> Address
+                                       
+                                  3. Many to Many 
+                                  
+                                            Parent -- Parent
+                                            Class  -- Student
+                                            	
+                                            	
+                                            	One to Many --> Mapping Table <--One to Many
+                                                 Parent     Mapping Table            Parent
+                                                 
+                                                 Class      classID studentId        Student
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            
+                                                            Key(Unique) 
+                                                            
+                                                    It is used to keeps everything unique
+                                                    It should not never change
+                                                    It protect integrity
+                                                      eg:
+                                                      User          Comment
+                                                      
+                                                       Let consider you are changing the Username in user table what happen to the comment table comment(which is user_id in fk in comment table)                              
+                                                    1. Primary key 
+                                                        GOOD PRACTICE(easy to change) Improve functionality, less work, Allows for added complexity
+                                                        Allows as to add more detail column about membership eg: price
+                                                    Member            Membership
+                                                    
+                                               id, membership_id(FK)      name, id(PK)  
+                                              1001    1                  GOLD    1                                                                 
+                                              1002    2                  BRONZE  2    
+                                              1003    3                  SILVER  3
+                                              
+                                              
+                                                       BAD PRACTICE(difficult to change)
+                                                       
+                                                         Member            Membership
+                                                    
+                                               id, membership_id        
+                                              1001    GOLD                                                                                 
+                                              1002    BRONZE                  
+                                              1003    SILVER                  
+                                              
+                                                   2. Super key
+                                                        Any number of column that create unique row    
+                                                   3. Candidate key
+                                                        Least number of column that create unique row   
+                                                   4. Primary key
+                                                        NOT NULL
+                                                        NEVER CHANGE - dont use  address, lastname
+                                                        UNIQUE 
+                                                   5. Alternate key
+                                                                                                         
+
+

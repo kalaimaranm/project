@@ -1,0 +1,10 @@
+
+
+spring:
+  data:
+    mongodb:
+      uri: |-
+        mongodb://kalaimaranm:Kalai%404321@bassure.in/kalaimaran
+    
+      
+        

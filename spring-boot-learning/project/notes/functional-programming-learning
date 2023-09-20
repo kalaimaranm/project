@@ -1,0 +1,6 @@
+                                                     Functional programming
+                                                     
+                                                     
+           1. intermediate stream - that return another stream  
+           2. terminate stream - last method which does not return any thing
+           

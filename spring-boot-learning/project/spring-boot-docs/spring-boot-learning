@@ -1,0 +1,49 @@
+                                                                   Spring-Boot
+                                                                   
+                                                                   
+  Why frame work?
+                 while developing enterprise application we should concentrate more on business logic 
+                 Reduce Boiler Plate code
+                 It will take care of dependency
+                 Basic Structure and Basic functionality
+                                                               
+  Why spring-frame work?
+  
+               Spring frame work is a frame work of frame work(Easy to implement other frame like Hibernate)
+               
+               
+               
+  Solve:
+         1. IOC - give the control to the framework(creating object), Tigtly coupled to loosly coupled
+         2. D.I - one class need help of other class, is a process of doing the IOC
+         3. AOP - How many times a method is invoked?, logging?, invoke this method before that method get invoked,seperate the logic (non-functional code)
+         4. Spring DATA - Think implementing JDBC working with that is harder
+                        - Frame work provide spring data library
+                                                                                                      
+         Three Types of creating Bean
+              1. XML based - ApplicationContext = ClassPathXmlApplicationContext();
+              2. Annotaion based with XML - ApplicationContext = ClassPathXmlApplicationContext();
+              3. Java class based  - ApplicationContext = AnnotationConfigApplicationContext()
+                         3.2 - user creating object with @Bean 
+         Bean Scopes:
+            1. Singleton - same object
+            2. Prototype - different object
+            3. Request - use in Spring MVC
+            4. Session - use in Spring MVC
+            5. Global Session - use in Spring MVC
+                                                                     
+        Bean life-cycle(7):
+            1. Declaring Bean
+            2. Instentiating Bean
+            3. Populate the property or constructor declared inside the bean
+            4. Post initialization - DB-connection, start the Thread  (PostConstruct|implements BeanName)
+            5. Available inside the Container
+            6. Pre Destroy phase
+            7. Destroying Bean
+            
+                                                                     
+                                                                     
+                                                                     
+                                                                  
+                                                                  
+                                                                     

@@ -1,0 +1,25 @@
+                                                         AOP(Aspect Oriented Programming) CROSS-CUTTING-CONCERN(SEPERATE-NON-FUNCTIONAL-CODE)
+                                                         
+                                                         
+               - Allows us to Cross-Cutting-Concern
+               - Seperate Non-functional code from Business Logic  
+               - Whether the Request is Authorized and Authenticated
+               - User is allowed to acces this functionality
+               - Sanitize the data from the request                                         
+               
+     Dependency : aspect j runtime
+                  aspect j weaver
+                  
+     
+     @EnableAspectJAutoProxy
+     @Aspect
+     @Component
+     @Before("execution(* com.bassure.aop.ShoppingCart.addToCart())") - * represent the any type of return type
+     @After("execution(* *.*.addToCart(..))") - 
+               *          -> any return type
+               *          -> any package
+              .*          -> any class
+              .method(..) -> this method with any number of arguments
+     @Within()     - for whole class         
+            
+                         

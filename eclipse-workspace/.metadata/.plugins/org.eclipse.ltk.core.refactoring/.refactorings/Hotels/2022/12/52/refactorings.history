@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Hotels/src/main/resources/SInjection.xml&apos; to &apos;context2.xml&apos;" description="Rename resource &apos;SInjection.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/SInjection.xml" name="context2.xml" stamp="1671900545855" updateReferences="true"/>
+</session>

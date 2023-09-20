@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- url for mysql connector -->
+		<property name="hibernate.connection.url">jdbc:mysql://bassure.in:3306/kalaimaran_db</property>
+
+		<!-- user name for db -->
+		<property name="hibernate.connection.username">Kalai</property>
+
+		<!--password for db -->
+		<property name="hibernate.connection.password">Kalai@4321</property>
+
+		<!-- loading the mysql driver class -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+		<!-- to show the sql query generating by hibernate -->
+		<property name="hibernate.show_sql">true</property>
+
+		<!-- setting connection pool size -->
+		<property name="hibernate.connection.pool_size">30</property>
+                
+                <property name = "hibernate.format_sql">true</property>
+	</session-factory>
+</hibernate-configuration>

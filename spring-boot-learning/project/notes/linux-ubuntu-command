@@ -1,0 +1,9 @@
+                                                        Linux-Ubuntu 
+
+   
+   
+    sudo apt remove mongodb    - delete file
+    dpkg -l | grep mongo       - show file related to mongo name
+    nano script.sh             - to create file
+    histroy-c                  - to clear history
+    

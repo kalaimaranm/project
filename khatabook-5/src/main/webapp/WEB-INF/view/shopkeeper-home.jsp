@@ -1,0 +1,106 @@
+<%-- 
+    Document   : shopkeeper-home
+    Created on : 08-Jun-2023, 3:27:16 pm
+    Author     : bas200193
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HOME</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+            body{
+                background: #8C8887;
+                /*background: #C9C3C2;*/
+                /*background: #F0E3E0  ;*/
+                /*background: #DFCBC6 ;*/
+                /*background: #1E1F25;*/
+            }
+            ul{
+                display: flex;
+                width: 100%;
+                height: 80vh;
+                margin: auto;
+                max-width: 1000px;
+                justify-content: space-between;
+                text-align: center;
+            }
+            li {
+                padding: 1rem 2rem 1.15rem;
+                text-transform: uppercase;
+                cursor: pointer;
+                color: #ebebeb;
+                min-width: 80px;
+                margin: auto;
+            }
+
+            li:hover {
+                background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+                background-size: 100% 100%;
+                color: #27262c;
+                animation: spring 300ms ease-out;
+                text-shadow: 0 -1px 0 #ef816c;
+                font-weight: bold;
+            }
+            li:active {
+                transform: translateY(4px);
+            }
+
+            @keyframes spring {
+                15% {
+                    -webkit-transform-origin: center center;
+                    -webkit-transform: scale(1.2, 1.1);
+                }
+                40% {
+                    -webkit-transform-origin: center center;
+                    -webkit-transform: scale(0.95, 0.95);
+                }
+                75% {
+                    -webkit-transform-origin: center center;
+                    -webkit-transform: scale(1.05, 1);
+                }
+                100% {
+                    -webkit-transform-origin: center center;
+                    -webkit-transform: scale(1, 1);
+                }
+            }
+
+            .shameless-plug{
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                padding: 8px 20px;
+                color: #ccc;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <!--<li><a href = "">Home</li></a>-->
+            <li> <a href = "placeorder?option=pendingorder">Pending Orders</li></a>
+        <li><a href = "shopkeeperform?option=bill">Bill</li></a>
+    <li><a href = "shopkeeperform?option=viewcustomer">View Customer</li></a>
+<li>  <a href = "createaccount.html">Add Customer</li></a>
+<li>  <a href = "shopkeeperform?option=paydebt">Pay Debt</li></a>
+<li>  <a href = "shopkeeperform?option=deletecustomer">Delete Customer</li></a>
+<li>  <a href = "product?option=addproductform">Add Product</li></a>
+<li>  <a href = "product?option=viewproduct">View Product</li></a>
+<li>  <a href = "product?option=updateproduct">Update Product</li></a>
+<li>  <a href = "product?option=deleteproductform">Delete Product</li></a>
+<!--<li>  <a href = "">Update Stock</li></a>-->
+
+</ul>
+
+<a class="shameless-plug" href="shopkeeperform?option=logout" target="_blank">👋log out</a>
+
+</body>
+</html>

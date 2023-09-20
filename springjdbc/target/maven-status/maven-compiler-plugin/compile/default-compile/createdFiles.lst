@@ -1,0 +1,4 @@
+com/bassure/springjdbc/record/Student.class
+com/bassure/springjdbc/dao/StudentDAOImpl.class
+com/bassure/springjdbc/dao/StudentDAO.class
+com/bassure/springjdbc/main/Main.class

@@ -1,0 +1,14 @@
+package com.kalai.lovecalculator.config;
+
+import org.springframework.web.WebApplicationInitializer;
+
+import javax.servlet.ServletContext;
+
+public class LoveCalculatorApplicationInitializer implements WebApplicationInitializer {
+
+	@Override
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		// TODO Auto-generated method stub
+
+	}
+}

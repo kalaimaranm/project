@@ -1,0 +1,22 @@
+INDEX VERSION 1.4+/home/bas200193/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+4212391326.index
+2897489.index
+557173393.index
+1981947302.index
+1517124546.index
+907021814.index
+760611381.index
+1183223922.index
+53299341.index
+3872381120.index
+2659605860.index
+857872532.index
+2643280565.index
+1279818015.index
+359828839.index
+2185871236.index
+1087622523.index
+1745532941.index
+978886020.index
+969332744.index
+2959921845.index

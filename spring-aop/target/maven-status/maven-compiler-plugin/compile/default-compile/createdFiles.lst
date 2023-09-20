@@ -1,0 +1,4 @@
+com/bassure/aop/aspect/LoggingAspect.class
+com/bassure/aop/BeanConfiguration.class
+com/bassure/aop/SpringAop.class
+com/bassure/aop/ShoppingCart.class

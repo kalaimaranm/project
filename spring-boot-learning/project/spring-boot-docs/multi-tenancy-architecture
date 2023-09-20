@@ -1,0 +1,32 @@
+                                                        Multi-tenancy-Architecture
+                                                        
+               
+               - One Tenant Should not access tenant data
+               - One tenant may face down(take) it should not affect other tenant 
+               - Decrease the cost and Increase the Profit
+               
+               
+              
+                                            Storage(SSD,HD)  
+                                            
+                                            
+                                       4 - TB is divided into 4 namespace(1,2,3,4)
+                                         - Each namespace is seperated each other in driver level
+                                         - They even don't know how many namespace are
+                                         - Each client data stored in single namespace(if not one all client data are stored in mixed ssd)
+                                         
+                                         
+                                         
+                                         Database
+                                         
+                                 container database
+                                        - database contains child database(plugable database)
+                                        - Each child database are isolated with each other
+                                        - Even we can choose the RAM, storage
+                                        
+                                        
+                                        Network
+                                        
+                                       - There will only one network
+                                       - It will be separeated with the virtual network by software 
+                                                                            

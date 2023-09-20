@@ -1,0 +1,10 @@
+spring.application.name=currency-conversion
+server.port=8100
+
+
+spring.config.import=optional:configserver:http://localhost:8888
+#spring.cloud.config.import-check.enabled=false
+#spring.application.name=limits-service
+spring.cloud.config.profile=dev
+spring.cloud.config.import-check.enabled=false
+eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka

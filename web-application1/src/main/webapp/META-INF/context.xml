@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/web-application">
+    <Realm className = "org.apache.catalina.realm.DataSourceRealm"
+           dataSourceName = "jdbc/myDB" localDataSource = "true"
+           userTable ="ruser" userNameCol = "user" userCredCol = "password"
+           userRoleTable = "rrole" roleNameCol = "roles" />
+
+    <Resource name = "jdbc/myDB" auth = "Container"
+              type = "javax.sql.DataSource" driverClassName = "com.mysql.cj.jdbc.Driver"
+              url = "jdbc:mysql://bassure.in:3306/kalaimaran_db"
+              username = "Kalai" password = "Kalai@4321" maxTotal = "2" maxIdle = "1"
+              maxWaitMillis = "-1" />
+</Context>

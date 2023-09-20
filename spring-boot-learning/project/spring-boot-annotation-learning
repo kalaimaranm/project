@@ -1,0 +1,239 @@
+                                                           Spring-Boot-Annotation
+                                      
+                                      
+                                      
+NOTE:
+     1. @Value("")  2. @Value("${}") || Environmet environment; environment.getProperty("com.mail.id");
+     @PropertySource("classpath:mail.properties")                                                           
+     Spring boot use and works in MVC
+     {
+         If you want to create spring MVC application use @Controller (View, String)
+         If you want to create restfull webservices use @RestController (JSON)
+     }
+     URI Template Variable - @GetMapping("/books/{id}")
+     @RequestBody && @ResponseBody  internally uses http message converter 
+     
+     
+                                                           
+     @Component("beanName")
+            when the class is annotated with @Component then the class is register in the container as bean automatically
+            It tells the Spring container to create bean automatically
+            It is an annotation based configuration
+            
+            
+            By default spring use class name for bean creation with starting letter smaller case
+            By using value = "" in @Component you can customize the bean name
+            
+     @Autowired
+            It is used to inject the bean automatically
+            It can be used in Field injection, Constructor injection, setter injection
+                    
+            
+       
+       
+                confusion , while injection
+     @Qualifier(two class implements same interface which type bean is to store during injection) Pizza interface implements Veg-pizza and Non-veg pizza
+      
+     
+            It is used in conjunction with Autowired to avoid confusion when we have two or more bean configured for same type
+            This issue during the loosely coupled 
+     
+     higher priority to bean when you have more than one bean with same type, while bean creation priority      
+     @Primary
+            It will give higher priority to the bean when there are multiple bean with same type               
+            
+     @Bean - used to create bean, method level, managed by container, inside configuration class, explicit object creation
+     
+           It is used inside the configuration class which is annotated with @Configuartion
+           It is method level annotation. when it is annotated in method that method produces a bean managed by spring container
+           By default bean name is same as method name you can change by @Bean(name = "beanName")
+           
+           when you have requirement to add record to the db while application starting 
+                                     to delete record from the db before application stop 
+           @Bean(initMethod = "init",destroyMethod = "destroy")   - this method inside the bean class 
+           
+           
+     Stereotype annotation(derived annotation of @Component)
+     
+          stereotype annotation are used to create bean automatically in spring IOC
+          The main stereotype annotation is @Component
+          By using this annotation spring provides more stereotype meta annotation such as 
+          @Controller - used to create bean in controller layer
+          @Service    - used to create bean in service layer (Business Logic)
+          @Repository - used to create bean in DAO repository layer
+                These three annotation are derived from @Component annotation
+                                                     
+        
+     @Lazy(on-demand, class level and method level)
+     
+         By default spring create all singleton beans eagerly at the startup/bootstrapping the application context
+         You can load the spring bean lazily (on-demand) using @Lazy annotation
+         Eager initialization is recommended to avoid and detect all possible errors immediately rather than at runtime
+         
+         When you use @Lazy annotation then the object is created on demand when call the bean(@Autowired)
+         
+          @Scope("singleton") - eager initialization
+          @Scope("prototype") - lazy  initialization (on demand)
+          
+          can be use with @Component
+                          @Bean
+                          @Configuration - all bean inside the class is lazy
+             
+       Spring Bean Scope
+       	  Latest version of spring bean defines 6 type of scope
+       	  
+       	  1. singleton
+       	  2. prototype
+       	  3. request
+       	  4. session
+       	  5. application
+       	  6. websocket
+       	  
+       	  Last four scope are available in web-aware application
+       	  
+      @Scope 
+         
+         It is used to define the scope of the bean
+         We use @Scope to define scope of @Component or a @Bean definition
+         
+         singleton - Only one instance of bean is created and share across all the entire application
+                     This is default scope
+                     It is stateless  	       
+         
+         prototype  - New instance of bean is created every time is requested
+                      It is statefull
+         @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) || @Scope(scopeName = "prototype")
+         
+            
+      @Value()(property key and property value) - not clarified
+      
+         It is used to assign default values to variables and method arguments
+         It is used to get value for a specific property key from a specific property value
+         We can read spring environment variables as well as system variables using @Value annotation
+         
+         @Value("DefaultValue")
+         @Value("in.email.propertykey")
+           
+         To read environment variable and system variable
+           
+         
+     1. @PropertySource 2. @PropertySources(to provide properties file to spring environment, used with @Configuration class, )
+     
+        1. It is used to provide properties file to spring environment
+        2. It is used to provide multiple properties file to spring environment
+           These annotation are used with @Configuration class
+           You can have multiple @PropertySource on a configuration class
+
+       @PropertySources({@PropertySource("classpath:message.properties"),
+                         @PropertySource("classpath:mail.properties")})
+                         
+                         
+     Environment :
+           We can use @Value annotation and Environment class to read the properties file
+           This class is used to read sources from the properties file 
+           Using environment.getProperty("com.mail.id");
+                 
+      
+      @Controller(3) : @Controller + @RequestMapping("/products") = combination
+           
+           Spring provides @Controller annotation to make java class as a MVC Controller 
+           Controller in spring MVC web application is a component that handles incoming HTTP requests
+           When you annotate a class with @Controller then spring will create bean and register in IOC container
+           @Controller annotation is used along with @RequestMapping() for request handling
+       
+      @RequestMapping()
+           
+           It is used to incoming HTTP request from the client 
+           It can be used with controller class and handler method
+           By default RequestMapping is a GET method
+           Multiple URI 
+                                                          @RequestMapping(value = {"/core-java", "/java", "/basic-java"})
+           specifying what type of HTTP method is this 
+                                                          @RequestMapping(value = "/java"
+                                                           , method = RequestMethod.POST)
+                                                           
+           specifying which type of data-format produces, consumes and multiple produces and consumes                                               
+      
+      @ResponseBody() object to JSON
+      
+          It is used to convert return type of response into json format - binding  
+          It internally use HTTP message converter to convert java object to JSON type
+          
+      
+      
+      @RestController() (difficulty, convinience)
+      
+         In order to develop restful webservices using spring MVC, we need use @Controller, @ResponseBody annotation
+         Spring 4.0 introduced @RestController to create restful webservices 
+         It is combination of @ResponseBody and @Controller == @RestController
+         If you want to create spring MVC application use @Controller (View, String)
+         If you want to create restfull webservices use @RestController (JSON)
+         
+       @GetMapping()
+      
+         It is used to get single resource  or multiple resource from the server
+         It is Internally annotated with {
+         It is short cut of                @RequestMapping(method = RequestMethod.GET)
+                                          }
+           
+       @PostMapping
+     
+        It is used to create new resource in database
+        It is Interanally annotated with {
+        It is short cut of                @RequestMapping(method = {RequestMethod.POST})
+                                          }
+                                          
+       @PutMapping
+       
+        It is used to update the existing resource
+        It Internally annotated with {
+        It is short cut of               @RequestMapping(method = {RequestMethod.PUT})
+                                      }
+       @DelteMapping
+      
+        It is used to delete the existing resource
+        It Internally annotated with {
+        It is show cut of             @RequestMapping(method = {RequestMethod.DELETE})
+                                     }                                
+                                                                          
+                                          
+       @RequestBody()RC - retrive from http request body and convert to java object
+    
+        It is responsible for retriving the HTTP request body to automatically convert into java object
+        It internally use Http message converter
+                                                       
+                                                                              
+       @ResponseStatus  || ResponseEntity
+        
+        It is used to send the HTTP status code to client
+        
+       @PathVariable() - bind the value from template variable to method argument
+      
+        It is used on the method argument to bind value on URI template variable to a method argument
+        @PathVariable("/books/{id}/{name}") - Here id and name are the template varible
+                                            - variable are given in server side not in client side
+                                            - value will stored in the name of id, name   
+                                            
+       @RequestParam() - extract value from query parameter from the URI- ?, =, & 
+      
+        It is used to extract query parameters from the request URI
+        @RequestParam(name = "firstname") firstname is query parameter name  
+        
+        
+        Configuration:
+         
+          There are three types of configuration in springboot
+            1. XML - based configuration
+            2. Java - based configuration (@Configuration)
+            3. Annotation - based configuration 
+       
+       @SpringBootApplication == @EnableAutoConfiguration + @SpringBootConfiguration + @ComponentScan(basepackage.subpackage)
+                                                            @Configuration
+         
+       @ConfigurationProperties    @EnableConfigurationProperties
+       
+          
+         
+      
+                 
+                                                                  
